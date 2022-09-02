@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { kitties } = require("./datasets/kitties");
 const { puppers } = require("./datasets/puppers");
 const { mods } = require("./datasets/mods");
@@ -13,6 +14,24 @@ const { constellations, stars } = require("./datasets/astronomy");
 const { weapons, characters } = require("./datasets/ultima");
 const { dinosaurs, humans, movies } = require("./datasets/dinosaurs");
 const { books } = require("./datasets/books");
+=======
+const { kitties } = require('./datasets/kitties');
+const { puppers } = require('./datasets/puppers');
+const { mods } = require('./datasets/mods');
+const { cakes } = require('./datasets/cakes');
+const { classrooms } = require('./datasets/classrooms');
+const { breweries } = require('./datasets/breweries');
+const { nationalParks } = require('./datasets/nationalParks');
+const { weather } = require('./datasets/weather');
+const { boardGames } = require('./datasets/boardGames');
+const { instructors, cohorts } = require('./datasets/turing');
+const { bosses, sidekicks } = require('./datasets/bosses');
+const { constellations, stars } = require('./datasets/astronomy');
+const { weapons, characters } = require('./datasets/ultima');
+const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
+
+>>>>>>> 51894690c118c9e48a929301df8dbdb6f3c9018a
+
 
 // SINGLE DATASETS
 // =================================================================
@@ -430,10 +449,32 @@ const bookPrompts = {
     return findNewBooks;
 
     // Annotation:
+<<<<<<< HEAD
     // iterate over the book objects and check for all books that are published in
     // 1990 or newer
     // return an object for each of those new books in a single array
   },
+=======
+    // Write your annotation here as a comment
+  },
+
+  getBooksByYear(books, year) {
+    // return an array of objects containing all books that were
+    // published after the specified year without the author or genre data. 
+    // The published property should be changed to year for the returned books.
+    // e.g. given 1990, return
+
+    // [{ title: 'Harry Potter and the Sorcerer\'s Stone', year: 1997 },
+    //  { title: 'Life of Pi', year: 2001 },
+    //  { title: 'The Curious Incident of the Dog in the Night-Time', year: 2003 }]
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  }
+
+>>>>>>> 51894690c118c9e48a929301df8dbdb6f3c9018a
 };
 
 // ---------------------------------------------------------------------------
@@ -691,6 +732,18 @@ const breweryPrompts = {
     // by using flatmap you will have returned all the individual objects into a single array rather than 5 arrays
   },
 
+  getSingleBreweryBeerCount(breweryName) {
+    // Return a number that is the count of beers that the specified
+    // brewery has e.g.
+    // given 'Ratio Beerworks', return 5
+
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
   findHighestAbvBeer() {
     // Return the beer which has the highest ABV of all beers
     // e.g.
@@ -709,6 +762,82 @@ const breweryPrompts = {
   // return highest ABV[0]
 };
 
+<<<<<<< HEAD
+=======
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+// DATASET: weather from './datasets/boardGames
+
+const boardGamePrompts = {
+  listGames(type) {
+    // Return an array of just the names of the games within a specified type. 
+    // e.g. given an argument of "strategy", return
+    // ["Chess", "Catan", "Checkers", "Pandemic", "Battle Ship", "Azul", "Ticket to Ride"]
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  listGamesAlphabetically(type) {
+    // Return an array of just the names of the games within a specified 
+    // type, sorted alphabetically. 
+    // e.g. given an argument of "childrens", return
+    // ["Candy Land", "Connect Four", "Operation", "Trouble"]
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  findHighestRatedGamesByType(type) {
+    // Return an object which is the highest rated game within the specified type.
+    // e.g. given the argument of 'party', return
+    // { name: 'Codenames', rating: 7.4, maxPlayers: 8 },
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  averageScoreByType(type) {
+    // Return the average score for the specified type.
+    // e.g. given the argument of "strategy", return 7
+    // note: do not worry about rounding your result.
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  averageScoreByTypeAndPlayers(type, maximumPlayers) {
+    // Return the average score of any games that match the specified type
+    // and maximum number of players.
+    // e.g. given the arguments of "strategy" and 2, return 6.16666666667
+    // note: do not worry about rounding your result.
+
+    /* CODE GOES HERE */
+
+    // Annotation:
+    // Write your annotation here as a comment
+  }
+};
+
+
+
+
+
+
+>>>>>>> 51894690c118c9e48a929301df8dbdb6f3c9018a
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
@@ -1050,4 +1179,8 @@ module.exports = {
   weatherPrompts,
   bookPrompts,
   dinosaurPrompts,
+<<<<<<< HEAD
+=======
+  boardGamePrompts,
+>>>>>>> 51894690c118c9e48a929301df8dbdb6f3c9018a
 };
